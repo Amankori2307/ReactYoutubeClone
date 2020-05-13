@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;   
+}
+body{
+    margin:3vw;
+    height:100%;
+}
+.search{
+    display: flex;
+    justify-content: stretch;
+    height:30px;
+}
+.search input{
+    flex:10;
+    color:#888;
+    padding-left:2vw;
+}
+.search button{
+    flex:2;
+    margin-left:10px;
+    max-width: 100px;
+    background-color: transparent;
+    border:1px solid #aaa;
+}
+.search button:hover{
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    margin-top:5vw;
+}
+
+.detail iframe{
+    width:100%;
+    height:55vw;
+}
+.sidebar{
+    margin:5vw 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    justify-content: stretch;
+}
+.item{
+    display: flex;
+    margin: 1.5vw 0;
+    font-size:0.9em;
+}
+.item:hover{
+    cursor:pointer;
+}
+.item-img{
+    width:22vw;
+    max-height: 100px;    
+}
+.item-text{
+    width:70vw;
+    margin-left:2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.channel-title{
+    font-size:0.8em;
+    font-weight: bolder;
+}
+.video-title{
+    padding-right:20px;
+}
+/* detail view body */
+.video-body{
+    background-color: rgb(244,244,244);
+    padding:1vw 2vw;
+}
+.detail-channel-title{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.detail-video-title{
+    font-size:1.1em;
+}
+
+/* code to truncate text */
+.truncate{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* after 600px */
+@media screen and (min-width:600px){
+    .detail-channel-title{
+        font-size: 2em;
+    }
+    .detail-video-title{
+        font-size:1.5em
+    }
+}
+/* after 900px */
+@media screen and (min-width:900px){
+    body{
+        margin:1.2vw;            
+    }
+    .search input, .search button{
+        font-size: 15px;
+    }
+    .main{
+        margin-top: 3vw;
+        flex-direction: row;
+    }
+    .detail iframe{
+        width:65vw;
+        height: 30vw;
+    }
+    .sidebar{
+        margin:0 0 0 2vw;
+        width:31vw;
+        height:100vh;
+        border:black 1px solid;
+        overflow-y: scroll;
+    }
+    .item{
+        font-size:0.7;
+        margin: 0.5vw;
+    }
+    .item-img{
+        width:30%;
+        max-height: 100px;
+    }
+    .item-text{
+        margin-left:0.5vw;
+        font-size: 1em;
+        width:70%;
+    }
+    .channel-title{
+        font-size: 0.9em;
+    }
+    .video-title{
+        padding-right:20px;
+    }
+}
+
+/* Preloader */
+.preloader{
+    height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+.preloader img{
+    width:100%;   
+}
