@@ -9,7 +9,7 @@ function App(props) {
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        onSubmit('trending videos');
+        onSubmit('trending songs');
     },[]);
 
     const onSubmit = (searchTerm) => {
